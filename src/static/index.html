@@ -8,9 +8,32 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div>
+          <h1>Mergington High School</h1>
+          <h2>Extracurricular Activities</h2>
+        </div>
+        <div class="account-controls">
+          <span id="teacher-status" class="teacher-status">Student view</span>
+          <button id="login-button" type="button">Teacher login</button>
+          <button id="logout-button" class="hidden" type="button">Log out</button>
+        </div>
+      </div>
     </header>
+
+    <dialog id="login-dialog">
+      <form id="login-form">
+        <h3>Teacher login</h3>
+        <label for="username">Username</label>
+        <input id="username" name="username" required autocomplete="username" />
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" required autocomplete="current-password" />
+        <div class="dialog-actions">
+          <button id="cancel-login" type="button">Cancel</button>
+          <button type="submit">Log in</button>
+        </div>
+      </form>
+    </dialog>
 
     <main>
       <section id="activities-container">
